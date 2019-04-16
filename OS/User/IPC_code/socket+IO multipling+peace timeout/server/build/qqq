@@ -1,0 +1,564 @@
+[ 33%] Building CXX object src/CMakeFiles/main.dir/server.cpp.o
+/home/freg/server/src/server.cpp: In member function ‘void Server::handle_read(const int&, const int&)’:
+/home/freg/server/src/server.cpp:208:9: error: no match for ‘operator!=’ (operand types are ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ and ‘long int’)
+   if(it != NULL){
+         ^
+/home/freg/server/src/server.cpp:208:9: note: candidates are:
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/freg/server/include/server.h:12,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/stl_list.h:187:7: note: bool std::_List_iterator<_Tp>::operator!=(const _Self&) const [with _Tp = ClientFd; std::_List_iterator<_Tp>::_Self = std::_List_iterator<ClientFd>]
+       operator!=(const _Self& __x) const
+       ^
+/usr/include/c++/4.8/bits/stl_list.h:187:7: note:   no known conversion for argument 1 from ‘long int’ to ‘const _Self& {aka const std::_List_iterator<ClientFd>&}’
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note: template<class _T1, class _T2> constexpr bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::pair<_T1, _T2>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator!=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator!=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:1043:5: note: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::move_iterator<_Iterator>&, const std::move_iterator<_IteratorR>&)
+     operator!=(const move_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1043:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::move_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:1049:5: note: template<class _Iterator> bool std::operator!=(const std::move_iterator<_Iterator>&, const std::move_iterator<_Iterator>&)
+     operator!=(const move_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1049:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::move_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/char_traits.h:40:0,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/postypes.h:221:5: note: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^
+/usr/include/c++/4.8/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::fpos<_StateT>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/allocator.h:138:5: note: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_T2>&)
+     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:138:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::allocator<_CharT>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/allocator.h:143:5: note: template<class _Tp> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_CharT>&)
+     operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:143:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::allocator<_CharT>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   mismatched types ‘const _CharT*’ and ‘std::_List_iterator<ClientFd>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/4.8/bits/basic_ios.h:37,
+                 from /usr/include/c++/4.8/ios:44,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/freg/server/include/server.h:11,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note: template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/freg/server/include/server.h:12,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note: template<class _Val> bool std::operator!=(const std::_List_iterator<_Tp>&, const std::_List_const_iterator<_Val>&)
+     operator!=(const _List_iterator<_Val>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   mismatched types ‘const std::_List_const_iterator<_Val>’ and ‘long int’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/freg/server/include/server.h:12,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note: template<class _Tp, class _Alloc> bool std::operator!=(const std::list<_Tp, _Alloc>&, const std::list<_Tp, _Alloc>&)
+     operator!=(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:208:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::list<_Tp, _Alloc>’
+   if(it != NULL){
+            ^
+/home/freg/server/src/server.cpp:220:9: error: no match for ‘operator!=’ (operand types are ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ and ‘long int’)
+   if(it != NULL){
+         ^
+/home/freg/server/src/server.cpp:220:9: note: candidates are:
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/freg/server/include/server.h:12,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/stl_list.h:187:7: note: bool std::_List_iterator<_Tp>::operator!=(const _Self&) const [with _Tp = ClientFd; std::_List_iterator<_Tp>::_Self = std::_List_iterator<ClientFd>]
+       operator!=(const _Self& __x) const
+       ^
+/usr/include/c++/4.8/bits/stl_list.h:187:7: note:   no known conversion for argument 1 from ‘long int’ to ‘const _Self& {aka const std::_List_iterator<ClientFd>&}’
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note: template<class _T1, class _T2> constexpr bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::pair<_T1, _T2>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator!=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator!=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:1043:5: note: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::move_iterator<_Iterator>&, const std::move_iterator<_IteratorR>&)
+     operator!=(const move_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1043:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::move_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:1049:5: note: template<class _Iterator> bool std::operator!=(const std::move_iterator<_Iterator>&, const std::move_iterator<_Iterator>&)
+     operator!=(const move_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1049:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::move_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/char_traits.h:40:0,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/postypes.h:221:5: note: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^
+/usr/include/c++/4.8/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::fpos<_StateT>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/allocator.h:138:5: note: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_T2>&)
+     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:138:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::allocator<_CharT>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/allocator.h:143:5: note: template<class _Tp> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_CharT>&)
+     operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:143:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::allocator<_CharT>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   mismatched types ‘const _CharT*’ and ‘std::_List_iterator<ClientFd>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/4.8/bits/basic_ios.h:37,
+                 from /usr/include/c++/4.8/ios:44,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/freg/server/include/server.h:11,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note: template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/freg/server/include/server.h:12,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note: template<class _Val> bool std::operator!=(const std::_List_iterator<_Tp>&, const std::_List_const_iterator<_Val>&)
+     operator!=(const _List_iterator<_Val>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   mismatched types ‘const std::_List_const_iterator<_Val>’ and ‘long int’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/freg/server/include/server.h:12,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note: template<class _Tp, class _Alloc> bool std::operator!=(const std::list<_Tp, _Alloc>&, const std::list<_Tp, _Alloc>&)
+     operator!=(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:220:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::list<_Tp, _Alloc>’
+   if(it != NULL){
+            ^
+/home/freg/server/src/server.cpp: In member function ‘void Server::handle_write(const int&, const int&)’:
+/home/freg/server/src/server.cpp:251:9: error: no match for ‘operator!=’ (operand types are ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ and ‘long int’)
+   if(it != NULL){
+         ^
+/home/freg/server/src/server.cpp:251:9: note: candidates are:
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/freg/server/include/server.h:12,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/stl_list.h:187:7: note: bool std::_List_iterator<_Tp>::operator!=(const _Self&) const [with _Tp = ClientFd; std::_List_iterator<_Tp>::_Self = std::_List_iterator<ClientFd>]
+       operator!=(const _Self& __x) const
+       ^
+/usr/include/c++/4.8/bits/stl_list.h:187:7: note:   no known conversion for argument 1 from ‘long int’ to ‘const _Self& {aka const std::_List_iterator<ClientFd>&}’
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note: template<class _T1, class _T2> constexpr bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::pair<_T1, _T2>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator!=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator!=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:1043:5: note: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::move_iterator<_Iterator>&, const std::move_iterator<_IteratorR>&)
+     operator!=(const move_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1043:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::move_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/stl_iterator.h:1049:5: note: template<class _Iterator> bool std::operator!=(const std::move_iterator<_Iterator>&, const std::move_iterator<_Iterator>&)
+     operator!=(const move_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:1049:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::move_iterator<_Iterator>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/char_traits.h:40:0,
+                 from /usr/include/c++/4.8/string:40,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/postypes.h:221:5: note: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^
+/usr/include/c++/4.8/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::fpos<_StateT>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/allocator.h:138:5: note: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_T2>&)
+     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:138:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::allocator<_CharT>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/allocator.h:143:5: note: template<class _Tp> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_CharT>&)
+     operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:143:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::allocator<_CharT>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   mismatched types ‘const _CharT*’ and ‘std::_List_iterator<ClientFd>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /home/freg/server/src/server.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/4.8/bits/basic_ios.h:37,
+                 from /usr/include/c++/4.8/ios:44,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/freg/server/include/server.h:11,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note: template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/freg/server/include/server.h:12,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note: template<class _Val> bool std::operator!=(const std::_List_iterator<_Tp>&, const std::_List_const_iterator<_Val>&)
+     operator!=(const _List_iterator<_Val>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   mismatched types ‘const std::_List_const_iterator<_Val>’ and ‘long int’
+   if(it != NULL){
+            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/freg/server/include/server.h:12,
+                 from /home/freg/server/src/server.cpp:25:
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note: template<class _Tp, class _Alloc> bool std::operator!=(const std::list<_Tp, _Alloc>&, const std::list<_Tp, _Alloc>&)
+     operator!=(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:251:12: note:   ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’ is not derived from ‘const std::list<_Tp, _Alloc>’
+   if(it != NULL){
+            ^
+/home/freg/server/src/server.cpp: In function ‘std::list<ClientFd>::iterator findItByFd(int)’:
+/home/freg/server/src/server.cpp:265:34: error: ‘connectionSet’ was not declared in this scope
+  for(list<ClientFd>::iterator it=connectionSet.begin();it!=connectionSet.end();++it){
+                                  ^
+In file included from /usr/include/unistd.h:226:0,
+                 from /home/freg/server/src/server.cpp:15:
+/home/freg/server/src/server.cpp:270:9: error: could not convert ‘0l’ from ‘long int’ to ‘std::list<ClientFd>::iterator {aka std::_List_iterator<ClientFd>}’
+  return NULL;
+         ^
+make[2]: *** [src/CMakeFiles/main.dir/server.cpp.o] Error 1
+make[1]: *** [src/CMakeFiles/main.dir/all] Error 2
+make: *** [all] Error 2
