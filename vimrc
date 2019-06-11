@@ -5,7 +5,7 @@ endif
 colorscheme ron				" 颜色配置方案
 set cindent				" 使用 C/C++ 语言的自动缩进方式
 set tabstop=8				" 设置制表符(tab键)的宽度
-set softtabstop=8			" 设置软制表符的宽度 
+set softtabstop=8			" 设置软制表符的宽度
 set shiftwidth=8			" (自动) 缩进使用的4个空格
 set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s "设置C/C++语言的具体缩进方式
 set number				" 显示行号
