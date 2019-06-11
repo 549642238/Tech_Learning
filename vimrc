@@ -26,7 +26,7 @@ let Tlist_Inc_Winwidth=0
 
 "-- WinManager setting --
 let g:winManagerWindowLayout='FileExplorer|TagList'	" 设置我们要管理的插件
-"let g:persistentBehaviour=0		" 如果所有编辑文件都关闭了，退出vim
+"let g:persistentBehaviour=0		" 如果所有编辑文件都关闭了，则退出vim
 nmap <F8> :WMToggle<cr>
 
 " -- MiniBufferExplorer --
