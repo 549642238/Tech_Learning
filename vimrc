@@ -14,6 +14,7 @@ set foldlevel=100			" 超过100行才使用自动折叠
 set foldcolumn=0			" 设置折叠栏宽度
 hi ColorColumn ctermbg=LightCyan guibg=LightCyan
 set cc=81				" 第81列高亮，警示每行代码不超过80列
+set hlsearch                            " 高亮所有匹配的搜索单词
 
 "-- Taglist setting --
 let Tlist_Ctags_Cmd='ctags'		" 因为我们放在环境变量里，所以可以直接执行
